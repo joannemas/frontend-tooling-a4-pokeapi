@@ -1,18 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/style.css">
-    <title>My project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poke api</title>
 </head>
-
 <body>
-    <h1>Hello</h1>
-    <p>This is your new project !</p>
+    <section class="app">
+        <h1>PokéAPI</h1>
+        <div id="filter">
+            <label for="type">Filtrer par type :</label>
+            <select id="type">
+                <option value="">Tous les types</option>
+                <option value="fire">Feu</option>
+                <option value="water">Eau</option>
+                <option value="grass">Plante</option>
+                <option value="electric">Électrique</option>
+                <option value="ice">Glace</option>
+                <option value="fighting">Combat</option>
+                <option value="poison">Poison</option>
+                <option value="ground">Sol</option>
+                <option value="flying">Vol</option>
+                <option value="psychic">Psy</option>
+                <option value="bug">Insecte</option>
+                <option value="rock">Roche</option>
+                <option value="ghost">Spectre</option>
+                <option value="dark">Ténèbres</option>
+                <option value="dragon">Dragon</option>
+                <option value="steel">Acier</option>
+                <option value="fairy">Fée</option>
+                <option value="normal">Normal</option>
+            </select>
+        </div>
+        
+        <div id="all" class="pokemon-container">
+        </div>
 
-    <script src="script.js"></script>
+        <div id="pagination">
+            <button id="prevPage">Précédent</button>
+            <button id="nextPage">Suivant</button>
+        </div>
+    </section>
+
+    <script type="module" src="script.js"></script>
 </body>
-
 </html>

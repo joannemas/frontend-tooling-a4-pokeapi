@@ -1,12 +1,231 @@
-@import 'normalize.css/normalize';
+@import 'normalize.css';
 
 h1 {
   color: palevioletred;
   font-size: 48px;
+  text-align: center;
 }
-
-/* styles.css */
 
 body {
     font-family: Arial, sans-serif;
+}
+
+//////////
+
+.pokemon-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 colonnes de largeur égale */
+  gap: 20px; /* Espacement entre les éléments */
+  padding: 0 50px; /* Marge intérieure */
+}
+
+// Variables types Pokémon
+$fire-color: #f5c05f;
+$water-color: #5959dc;
+$grass-color: rgb(120, 180, 120);
+$electric-color: rgb(244, 244, 143);
+$ice-color: lightblue;
+$fighting-color: rgb(250, 139, 139);
+$poison-color: rgb(235, 144, 235);
+$ground-color: rgb(165, 100, 100);
+$flying-color: skyblue;
+$psychic-color: rgb(255, 205, 213);
+$bug-color: rgb(199, 235, 199);
+$rock-color: rgba(241, 241, 241, 0.715);
+$ghost-color: rgb(73, 72, 72);
+$dark-color: rgb(131, 131, 131);
+$dragon-color: rgb(69, 69, 96);
+$steel-color: rgb(108, 108, 108);
+$fairy-color: rgb(253, 227, 231);
+$normal-color: rgb(200, 202, 203);
+
+@mixin circle {
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.pokemon-circle {
+  @include circle;
+
+  h3 {
+    font-family: 'Roboto', sans-serif;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    font-weight: 300;
+    margin: 0;
+  }
+
+  p {
+    text-transform: uppercase;
+    font-size: 12px;
+  }
+}
+
+// Style spécifique pour types
+
+.pokemon-circle.fire {
+  background-color: $fire-color;
+}
+
+.pokemon-circle.water {
+  background-color: $water-color;
+}
+
+.pokemon-circle.grass {
+  background-color: $grass-color;
+}
+
+.pokemon-circle.electric {
+  background-color: $electric-color;
+}
+
+.pokemon-circle.ice {
+  background-color: $ice-color;
+}
+
+.pokemon-circle.fighting {
+  background-color: $fighting-color;
+}
+
+.pokemon-circle.poison {
+  background-color: $poison-color;
+}
+
+.pokemon-circle.ground {
+  background-color: $ground-color;
+}
+
+.pokemon-circle.flying {
+  background-color: $flying-color;
+}
+
+.pokemon-circle.psychic {
+  background-color: $psychic-color;
+}
+
+.pokemon-circle.bug {
+  background-color: $bug-color;
+}
+
+.pokemon-circle.rock {
+  background-color: $rock-color;
+}
+
+.pokemon-circle.ghost {
+  background-color: $ghost-color;
+}
+
+.pokemon-circle.dark {
+  background-color: $dark-color;
+}
+
+.pokemon-circle.dragon {
+  background-color: $dragon-color;
+}
+
+.pokemon-circle.steel {
+  background-color: $steel-color;
+}
+
+.pokemon-circle.fairy {
+  background-color: $fairy-color;
+}
+
+.pokemon-circle.normal {
+  background-color: $normal-color;
+}
+
+// Style pour le texte à l'intérieur des cercles
+.pokemon-circle-text {
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+
+/////////////
+/// 
+
+// Variables pour le select
+$main-bg-color: #fff;
+$select-bg-color: #fff;
+$select-border: 1px solid #ccc;
+$select-radius: 5px;
+$select-font-size: 14px;
+$select-option-bg: #fff;
+$select-option-color: #333;
+$select-option-selected-bg: #007bff;
+$select-option-selected-color: #fff;
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  font-size: $select-font-size;
+  border: $select-border;
+  border-radius: $select-radius;
+  background-color: $select-bg-color;
+  appearance: none;
+  cursor: pointer;
+}
+
+select option {
+  background-color: $select-option-bg;
+  color: $select-option-color;
+  font-size: $select-font-size;
+}
+
+select option:checked {
+  background-color: $select-option-selected-bg;
+  color: $select-option-selected-color;
+}
+
+#filter{
+  margin: 20px auto;
+  width: 50%;
+  margin-top: 50px;
+}
+
+
+/////////////
+///
+
+#pagination {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#prevPage,
+#nextPage {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#prevPage:hover,
+#nextPage:hover {
+  background-color: #0056b3;
+}
+
+#prevPage, #nextPage {
+  margin: 10px;
 }

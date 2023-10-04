@@ -1,3 +1,186 @@
+@charset "UTF-8";
+@import 'normalize.css';
+h1 {
+  color: palevioletred;
+  font-size: 48px;
+  text-align: center;
+}
 
+body {
+  font-family: Arial, sans-serif;
+}
+
+.pokemon-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  /* 5 colonnes de largeur égale */
+  gap: 20px;
+  /* Espacement entre les éléments */
+  padding: 0 50px;
+  /* Marge intérieure */
+}
+
+.pokemon-circle {
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.pokemon-circle h3 {
+  font-family: "Roboto", sans-serif;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  font-weight: 300;
+  margin: 0;
+}
+.pokemon-circle p {
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.pokemon-circle.fire {
+  background-color: #f5c05f;
+}
+
+.pokemon-circle.water {
+  background-color: #5959dc;
+}
+
+.pokemon-circle.grass {
+  background-color: #78b478;
+}
+
+.pokemon-circle.electric {
+  background-color: #f4f48f;
+}
+
+.pokemon-circle.ice {
+  background-color: lightblue;
+}
+
+.pokemon-circle.fighting {
+  background-color: #fa8b8b;
+}
+
+.pokemon-circle.poison {
+  background-color: #eb90eb;
+}
+
+.pokemon-circle.ground {
+  background-color: #a56464;
+}
+
+.pokemon-circle.flying {
+  background-color: skyblue;
+}
+
+.pokemon-circle.psychic {
+  background-color: #ffcdd5;
+}
+
+.pokemon-circle.bug {
+  background-color: #c7ebc7;
+}
+
+.pokemon-circle.rock {
+  background-color: rgba(241, 241, 241, 0.715);
+}
+
+.pokemon-circle.ghost {
+  background-color: #494848;
+}
+
+.pokemon-circle.dark {
+  background-color: #838383;
+}
+
+.pokemon-circle.dragon {
+  background-color: #454560;
+}
+
+.pokemon-circle.steel {
+  background-color: #6c6c6c;
+}
+
+.pokemon-circle.fairy {
+  background-color: #fde3e7;
+}
+
+.pokemon-circle.normal {
+  background-color: #c8cacb;
+}
+
+.pokemon-circle-text {
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  appearance: none;
+  cursor: pointer;
+}
+
+select option {
+  background-color: #fff;
+  color: #333;
+  font-size: 14px;
+}
+
+select option:checked {
+  background-color: #007bff;
+  color: #fff;
+}
+
+#filter {
+  margin: 20px auto;
+  width: 50%;
+  margin-top: 50px;
+}
+
+#pagination {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#prevPage,
+#nextPage {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#prevPage:hover,
+#nextPage:hover {
+  background-color: #0056b3;
+}
+
+#prevPage, #nextPage {
+  margin: 10px;
+}
 
 /*# sourceMappingURL=style.css.map */
